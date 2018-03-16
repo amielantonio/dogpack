@@ -1,0 +1,13 @@
+{
+    "name": "vendor/kenneljr",
+    "description": "Procedural PHP framework (mini-project for students who did not use OOPHP)",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ämiel Antonio",
+            "email": "amielnicole.antonio@gmail.com"
+        }
+    ],
+    "require": {}
+}
