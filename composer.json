@@ -1,6 +1,6 @@
 {
     "name": "kenneljr/kenneljr",
-    "description": "Procedural PHP framework (mini-project for students who did not use OOPHP)",
+    "description": "A Procedural PHP framework",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -9,5 +9,7 @@
             "email": "amielnicole.antonio@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=5.6.4"
+    }
 }
