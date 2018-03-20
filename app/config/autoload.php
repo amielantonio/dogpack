@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  |  AUTO-LOADER
  | -------------------------------------------------------------------
  |
- |
+ | Add additional libraries to autoload before the boot of the application
  |
  |
  */
@@ -19,7 +19,7 @@ return [
 
     /*
      | --------------------------------------------------------------
-     |  LIBRARIES
+     |  Libraries
      | --------------------------------------------------------------
      |
      |
@@ -30,14 +30,14 @@ return [
 
     /*
      | -------------------------------------------------------------
-     |  THIRD PARTY PACKAGES
+     |  Vendors
      | -------------------------------------------------------------
      |
      |
      |
      |
      */
-    'packages' => [],
+    'vendor' => [],
 
 
 ];
