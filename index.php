@@ -1,7 +1,7 @@
 <?php
 
 /*
- | Kenneljr
+ | kenneljr
  |
  | An Open source web application development framework written in Procedural PHP
  |

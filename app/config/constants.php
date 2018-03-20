@@ -2,101 +2,34 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
- | ---------------------------------------------------
+ | -------------------------------------------------------------------
+ |  APPLICATION PATH
+ | -------------------------------------------------------------------
  |
- | ---------------------------------------------------
- |
- |
- |
+ | The application path constants that are used by the application for
+ | accessing specific files for the specific folder.
  |
  */
+
+defined( 'CONFIG_PATH' )     OR define( 'CONFIG_PATH', APPPATH . '/config' );
+defined( 'DB_PATH' )         OR define( 'DB_PATH', APPPATH . '/database');
+defined( 'CORE_PATH' )       OR define( 'CORE_PATH', APPPATH . '/core');
+defined( 'SERVICES_PATH' )   OR define( 'SERVICES_PATH', APPPATH . '/services');
+defined( 'RESOURCE_PATH' )   OR define( 'RESOURCE_PATH', BASEPATH . '/resources');
+defined( 'VIEW_PATH' )       OR define( 'VIEW_PATH', BASEPATH . '/public/views');
+defined( 'CONTROLLER_PATH' ) OR define( 'CONTROLLER_PATH', BASEPATH . '/controllers');
+defined( 'ROUTES_PATH')      OR define( 'ROUTES_PATH', BASEPATH . '/web');
 
 /*
- | ---------------------------------------------------
- |  Define Config Path
- | ---------------------------------------------------
- |
- | The Configuration directory that contains all the web applications config
- */
-defined( 'CONFIGPATH' ) OR define( 'CONFIGPATH', APPPATH . '/config' );
-
-
-/*
- | ---------------------------------------------------
- |  Define Core Path
- | ---------------------------------------------------
- |
- | Contains all core files that is responsible for the overall functionality
- | of the web application.
- */
-
-defined( 'COREPATH' ) OR define( 'COREPATH', APPPATH . '/core');
-
-/*
- | ---------------------------------------------------
- |  Define Database Path
- | ---------------------------------------------------
- |
- | The Database directory that contains all the database queries and
- | database connection and engine.
- */
-
-defined( 'DBPATH') OR define( 'DBPATH', APPPATH . '/database');
-
-/*
- | ---------------------------------------------------
- |  Define Services Path
- | ---------------------------------------------------
- |
- | The directory that contains all the web application's service provider. The files inside this
- | helps extend the functionality of the web application
- |
- */
-
-defined( 'SERVICESPATH') OR define( 'SERVICESPATH', APPPATH . '/services');
-
-/*
- | ---------------------------------------------------
- |  Define Resource Path
- | ---------------------------------------------------
- |
- | The resources directory contains all the stylesheet and scripts that
- | the web application is using.
- |
- */
-defined( 'RESOURCEPATH' ) OR define( 'RESOURCEPATH', BASEPATH . '/resources');
-
-/*
- | ---------------------------------------------------
- |  Define View Path
- | ---------------------------------------------------
- |
- | the directory for all the views used by the web application
- */
-defined('VIEWPATH' ) OR define( 'VIEWPATH', BASEPATH . '/public/views');
-
-
-
-/*
- | ---------------------------------------------------
- |  Define Controller Path
- | ---------------------------------------------------
- |
+ | --------------------------------------------------------------------------
+ |  FILE DIRECTORY MODES
+ | --------------------------------------------------------------------------
  |
  |
  |
  */
-defined( 'CONTROLLERPATH' ) OR define( 'CONTROLLERPATH', BASEPATH . '/controllers');
+defined('FILE_READ_MODE')  OR define('FILE_READ_MODE', 0644);
+defined('FILE_WRITE_MODE') OR define('FILE_WRITE_MODE', 0666);
+defined('DIR_READ_MODE')   OR define('DIR_READ_MODE', 0755);
+defined('DIR_WRITE_MODE')  OR define('DIR_WRITE_MODE', 0755);
 
-
-/*
- | ---------------------------------------------------
- |  Define Routes path
- | ---------------------------------------------------
- |
- |
- |
- |
- */
-
-defined( 'ROUTESPATH') OR define( 'ROUTESPATH', BASEPATH . '/web');
