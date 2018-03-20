@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
  | ---------------------------------------------------
- |  Database configuration file
+ |  DATABASE CONFIGURATION FILE
  | ---------------------------------------------------
  |
  | This file contains the settings to access the application database

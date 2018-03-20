@@ -1,10 +1,10 @@
 <?php
 
-//defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
  | -------------------------------------------------------------------
- |  Database Connection
+ |  DATABASE CONNECTION
  | -------------------------------------------------------------------
  |
  |
