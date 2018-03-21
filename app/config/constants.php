@@ -13,12 +13,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 defined( 'CONFIG_PATH' )     OR define( 'CONFIG_PATH', APPPATH . '/config' );
 defined( 'DB_PATH' )         OR define( 'DB_PATH', APPPATH . '/database');
-defined( 'CORE_PATH' )       OR define( 'CORE_PATH', APPPATH . '/core');
+defined( 'SYS_PATH' )       OR define( 'SYS_PATH', APPPATH . '/system');
 defined( 'SERVICES_PATH' )   OR define( 'SERVICES_PATH', APPPATH . '/services');
 defined( 'RESOURCE_PATH' )   OR define( 'RESOURCE_PATH', BASEPATH . '/resources');
 defined( 'VIEW_PATH' )       OR define( 'VIEW_PATH', BASEPATH . '/public/views');
 defined( 'CONTROLLER_PATH' ) OR define( 'CONTROLLER_PATH', BASEPATH . '/controllers');
-defined( 'ROUTES_PATH')      OR define( 'ROUTES_PATH', BASEPATH . '/web');
+defined( 'ROUTES_PATH')      OR define( 'ROUTES_PATH', BASEPATH . '/route');
 
 /*
  | --------------------------------------------------------------------------

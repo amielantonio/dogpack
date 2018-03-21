@@ -54,8 +54,10 @@ return [
      |  Default Timezone
      | ---------------------------------------------------------------
      |
+     | Set the default timezone of the application. You can check the
+     | supported timezone of PHP in their manual.
      |
-     |
+     | http://php.net/manual/en/timezones.php
      |
      */
     'timezone' => 'Asia/Manila',

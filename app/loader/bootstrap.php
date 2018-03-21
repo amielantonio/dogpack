@@ -26,7 +26,7 @@ require APPPATH . '/config/constants.php';
  |
  */
 
-require CORE_PATH . '/functions.php';
+require SYS_PATH . '/framework/functions.php';
 
 /*
  | -------------------------------------------------------------------
