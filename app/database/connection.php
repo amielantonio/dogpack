@@ -7,8 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  |  DATABASE CONNECTION
  | -------------------------------------------------------------------
  |
- |
- |
+ | This file identifies the connection string to be used by the
+ | framework
  |
  */
 
@@ -26,17 +26,17 @@ switch( $db['default_driver'] ) {
         mysql( $db['connections']['mysql'] );
         break;
 
-//    case 'sqlite' :
-//        sqlite( $db['connections']['sqlite'] );
-//        break;
+    case 'sqlite' :
+        sqlite( $db['connections']['sqlite'] );
+        break;
 
-//    case 'postgresql' :
-//        postgresql( $db['connections']['postgresql'] ) ;
-//        break;
+    case 'postgresql' :
+        postgresql( $db['connections']['postgresql'] ) ;
+        break;
 
-//    case 'sqlserver' :
-//        sqlserver( $db['connections']['sqlserver'] );
-//        break;
+    case 'sqlserver' :
+        sqlserver( $db['connections']['sqlserver'] );
+        break;
 
     //Default database
     default :
@@ -95,26 +95,52 @@ function sqlite( $database ){
 
 }
 
+/**
+ * Create a connection string with Postgresql
+ *
+ * @param $database
+ * @return PDO
+ */
+function postgresql( $database ){
 
-//function postgresql( $database ){
-//
-//}
+    try{
 
-//function sqlserver( $database ){
-//
-//    try{
-//
-//        $conn = new PDO( "sqlite:/{$database['database_path']};Version=3" );
-//
-//        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//
-//        return $conn;
-//
-//    }
-//    catch( PDOException $e ){
-//
-//        throw new PDOException( $e->getMessage() );
-//
-//    }
-//
-//}
+        $conn = new PDO("pgsql:dbname={$database['database']};host={$database['host']}", $database['username'], $database['password']);
+
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $conn;
+
+    }
+    catch( PDOException $e ){
+
+        throw new PDOException( $e->getMessage() );
+
+    }
+
+}
+
+/**
+ * Create a connection string with SQLServer
+ *
+ * @param $database
+ * @return PDO
+ */
+function sqlserver( $database ){
+
+    try{
+
+        $conn = new PDO( "dblib:host={$database['host']}:{$database['port']};dbname={$database['database']}\", \"{$database['username']}\", \"{$database['password']}\"" );
+
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $conn;
+
+    }
+    catch( PDOException $e ){
+
+        throw new PDOException( $e->getMessage() );
+
+    }
+
+}

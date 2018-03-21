@@ -22,8 +22,8 @@ return [
      | ---------------------------------------------------
      |
      |
-     |
-     |
+     | This line tells what database driver will be the
+     | the default driver that the framework will use.
      |
      */
     'default_driver' => 'mysql',
@@ -58,16 +58,37 @@ return [
         ],
 
         'sqlite' => [
+
             'db_driver'     => 'sqlite',
             'database_path' => '',
             'prefix'        => ''
+
         ],
 
         'postgresql' => [
 
+            'db_driver' => 'pgsql',
+            'username' => '',
+            'password' => '',
+            'prefix' => '',
+            'host' => '127.0.0.1',
+            'port' => '5432',
+            'database' => '',
+            'charset' => 'utf8',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+
         ],
 
         'sqlserver' => [
+            'db_driver' => 'sqlserver',
+            'database' => '',
+            'username' => '',
+            'password' => '',
+            'prefix' => '',
+            'host' => 'localhost',
+            'port' => '1433',
+            'charset' => 'utf8',
 
         ]
     ],
@@ -78,8 +99,8 @@ return [
      | ---------------------------------------------------
      |
      |
-     |
-     |
+     | Sets the default name of the migrations table. This
+     | tells the framework
      |
      */
     'migrations_table' => 'migrations'
