@@ -33,6 +33,7 @@ if( ! defined('BASEPATH')){
     define( 'APPPATH', dirname(__FILE__) . '/app');
 
 }
+
 /*
  | ---------------------------------------------------
  |  APPLICATION LOADER
@@ -51,6 +52,7 @@ require APPPATH . '/loader/bootstrap.php';
  |  Pass the current URI for routing
  | ---------------------------------------------------
  */
+
 $uri = urldecode(
     parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 );
@@ -60,3 +62,6 @@ $uri = urldecode(
  |  Process the URI and start the routes file
  | ---------------------------------------------------
  */
+
+
+route_boot( $uri );

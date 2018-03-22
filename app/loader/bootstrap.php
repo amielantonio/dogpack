@@ -26,21 +26,21 @@ require APPPATH . '/config/constants.php';
  |
  */
 
-require SYS_PATH . '/framework/functions.php';
+require SYS_PATH . '/Framework/Functions.php';
 
 /*
  | -------------------------------------------------------------------
- |  Load the Services
+ |  Load the Default Services
  | -------------------------------------------------------------------
  |
- | Next, get all services that are used by the framework.
- |
+ | Next, Load all the default services that the framework is using to
+ | help create start the web application.
  |
  */
 
-require SERVICES_PATH . '/Auth.php';
-require SERVICES_PATH . '/Routes.php';
-require SERVICES_PATH . '/Migration.php';
+require SERVICES_PATH . '/AuthServices.php';
+require SERVICES_PATH . '/RoutesServices.php';
+require SERVICES_PATH . '/MigrationServices.php';
 
 
 /*
