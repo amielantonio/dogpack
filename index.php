@@ -15,11 +15,6 @@
  */
 
 
-//var_dump();
-
-
-header('location:'. $_SERVER['SERVER_ADDR']);
-
 /*
  | ---------------------------------------------------
  |  APPLICATION ENTRY POINT
@@ -43,8 +38,8 @@ if( ! defined('BASEPATH')){
  |  APPLICATION LOADER
  | ---------------------------------------------------
  |
- | Loads the bootstrap file of the application. This is where all
- | the application codes are started
+ | Loads the bootstrap file of the application. This is
+ | where all the application codes are started.
  |
  */
 

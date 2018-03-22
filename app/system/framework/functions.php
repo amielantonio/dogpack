@@ -80,4 +80,83 @@ function asset( $path ){
 function asset_dir( $path ){
 
     return RESOURCE_PATH . "\\{$path}";
+
+}
+
+/**
+ * Check if current URI is home page
+ *
+ *
+ */
+function is_home(){
+
+
+}
+
+/**
+ * Check if the current page is the same with the
+ * specified page.
+ *
+ */
+function is_page( $route ){
+
+
+
+}
+
+
+/**
+ * Returns the view
+ *
+ * @param $view
+ * @param $data array
+ * @return mixed
+ */
+
+function view( $view, $data = []){
+
+    extract( $data );
+
+    return require VIEW_PATH."/{$view}.view.php";
+
+}
+
+/**
+ * Return a View
+ *
+ * @param $error
+ * @return mixed
+ */
+function view_error( $error ){
+
+    return require BASEPATH."/public/error/{$error}.view.php";
+}
+
+/**
+ * Return a template within the current layout
+ *
+ * @param $partialView
+ * @return mixed
+ * @throws exception
+ */
+function view_partial( $partialView, $data ){
+
+    extract( $data );
+
+    return require VIEW_PATH."/{$partialView}.view.php";
+
+}
+
+
+/**
+ * Redirect User to the specified route
+ *
+ * @param $location
+ * @param int $response
+ */
+
+function redirect( $location, $response = 302 ){
+
+    header("Location: {$location}", true, $response);
+
 }
