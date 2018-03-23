@@ -12,8 +12,14 @@ include_once SYS_PATH . '/Routing/RouteValidator.php';
  */
 function _route_matches( $uri ){
 
+    $sanitized_uri = _sanitize_uri( $uri );
+    $route_collection = _route_collection();
 
+    if( ! _route_validate( $sanitized_uri, $route_collection ) ){
 
+        return false;
+
+    }
 
     return true;
 }

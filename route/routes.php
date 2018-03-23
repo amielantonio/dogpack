@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  |                routes.
  | [middleware] - An intermediary security that serves as a guard between
  |                a route and a controller.
- | [echo]       - returns a string response for the user
+ | [print]       - returns a string response for the user
  |
  | Now start creating your application!
  |
@@ -29,6 +29,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 $route['/'] = [ 'view' => 'welcome' ];
+
+$route['test/{params}'] = [ 'view' => 'testparams' ];
 
 /*
  | -------------------------------------------------------------------
